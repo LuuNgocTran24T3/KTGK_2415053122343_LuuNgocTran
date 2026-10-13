@@ -13,6 +13,8 @@ class ChiTietChiTieuActivity : AppCompatActivity() {
     private lateinit var tvGhiChu_343: TextView
     private lateinit var tvTrangThai_343: TextView
 
+    private lateinit var khoanChi_343: KhoanChi
+
     private var ten_343 = ""
     private var tien_343 = 0.0
     private var ghiChu_343 = ""
@@ -61,6 +63,14 @@ class ChiTietChiTieuActivity : AppCompatActivity() {
 
             suaKhoanChiLauncher_343.launch(intentSua_343)
         }
+
+        khoanChi_343 = KhoanChi(
+            maKhoanChi = "KC001",
+            tenKhoanChi = ten_343,
+            soTien = tien_343,
+            ghiChu = ghiChu_343,
+            daThanhToan = false
+        )
     }
 
 
