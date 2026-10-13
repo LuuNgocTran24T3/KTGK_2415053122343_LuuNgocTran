@@ -1,4 +1,5 @@
 package com.example.ktgk_2415053122343_luungoctran
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -33,12 +34,38 @@ class MainActivity : AppCompatActivity() {
             themKhoanChi_343()
         }
 
+
         btnXemChiTiet_343.setOnClickListener {
-            Toast.makeText(
+            val ten_343 = tenKhoanChi_343.text.toString().trim()
+            val tienChuoi_343 = soTien_343.text.toString().trim()
+            val tien_343 = tienChuoi_343.toDoubleOrNull()
+
+            if (ten_343.isEmpty()) {
+                tenKhoanChi_343.error = "Vui long nhap ten khoan chi"
+                return@setOnClickListener
+            }
+
+            if (tien_343 == null ||
+                !tien_343.isFinite() ||
+                tien_343 <= 0
+            ) {
+                soTien_343.error = "So tien khong hop le"
+                return@setOnClickListener
+            }
+
+            val intent_343 = Intent(
                 this,
-                "Chuc nang chi tiet se duoc hoan thien o Cau 2",
-                Toast.LENGTH_SHORT
-            ).show()
+                ChiTietChiTieuActivity::class.java
+            )
+
+            intent_343.putExtra("TEN_KHOAN_CHI", ten_343)
+            intent_343.putExtra("SO_TIEN", tien_343)
+            intent_343.putExtra(
+                "GHI_CHU",
+                ghiChu_343.text.toString().trim()
+            )
+
+            startActivity(intent_343)
         }
     }
 
