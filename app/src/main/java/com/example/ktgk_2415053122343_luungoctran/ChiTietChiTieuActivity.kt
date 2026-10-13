@@ -13,6 +13,8 @@ class ChiTietChiTieuActivity : AppCompatActivity() {
     private lateinit var tvGhiChu_343: TextView
     private lateinit var tvTrangThai_343: TextView
 
+    private lateinit var khoanChi_343: KhoanChi
+
     private var ten_343 = ""
     private var tien_343 = 0.0
     private var ghiChu_343 = ""
@@ -61,6 +63,14 @@ class ChiTietChiTieuActivity : AppCompatActivity() {
 
             suaKhoanChiLauncher_343.launch(intentSua_343)
         }
+
+        khoanChi_343 = KhoanChi(
+            maKhoanChi = "KC001",
+            tenKhoanChi = ten_343,
+            soTien = tien_343,
+            ghiChu = ghiChu_343,
+            daThanhToan = false
+        )
     }
 
 
@@ -91,11 +101,22 @@ class ChiTietChiTieuActivity : AppCompatActivity() {
             }
         }
 
+
     private fun hienThiKhoanChi_343() {
-        tvTenKhoanChi_343.text = "Ten khoan chi: $ten_343"
-        tvSoTien_343.text = "So tien: ${tien_343} VNĐ"
+        tvTenKhoanChi_343.text =
+            "Ten khoan chi: ${khoanChi_343.tenKhoanChi}"
+
+        tvSoTien_343.text =
+            "So tien: ${khoanChi_343.soTien} VNĐ"
+
         tvGhiChu_343.text =
-            "Ghi chu: ${ghiChu_343.ifBlank { "Khong co" }}"
-        tvTrangThai_343.text = "Trang thai: Chua thanh toan"
+            "Ghi chu: ${khoanChi_343.ghiChu.ifBlank { "Khong co" }}"
+
+        tvTrangThai_343.text =
+            if (khoanChi_343.daThanhToan) {
+                "Trang thai: Da thanh toan"
+            } else {
+                "Trang thai: Chua thanh toan"
+            }
     }
 }

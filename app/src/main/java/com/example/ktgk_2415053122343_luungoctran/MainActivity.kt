@@ -67,6 +67,18 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent_343)
         }
+
+        val khoanChi_343 = KhoanChi(
+            maKhoanChi = "KC001",
+            tenKhoanChi = "Mua sach",
+            soTien = 50000.0,
+            ghiChu = "Sach lap trinh",
+            daThanhToan = false
+        )
+
+        if (khoanChi_343.laSoTienHopLe_343()) {
+            println(khoanChi_343.layThongTin_343())
+        }
     }
 
     private fun themKhoanChi_343() {
