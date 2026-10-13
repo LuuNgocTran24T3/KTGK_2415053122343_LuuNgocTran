@@ -14,9 +14,9 @@ class ChinhSuaChiTieuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chinh_sua_chi_tieu)
 
-        ten_343 = findViewById(R.id.edtSuaTenKhoanChi)
-        tien_343 = findViewById(R.id.edtSuaSoTien)
-        ghiChu_343 = findViewById(R.id.edtSuaGhiChu)
+        ten_343 = findViewById(R.id.editSuaTenKhoanChi)
+        tien_343 = findViewById(R.id.editSuaSoTien)
+        ghiChu_343 = findViewById(R.id.editSuaGhiChu)
 
         ten_343.setText(intent.getStringExtra("TEN_KHOAN_CHI") ?: "")
         tien_343.setText(

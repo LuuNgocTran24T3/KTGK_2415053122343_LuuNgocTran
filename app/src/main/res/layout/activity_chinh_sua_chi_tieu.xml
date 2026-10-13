@@ -16,21 +16,21 @@
         android:paddingBottom="20dp" />
 
     <EditText
-        android:id="@+id/edtSuaTenKhoanChi"
+        android:id="@+id/editSuaTenKhoanChi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Tên khoản chi"
         android:inputType="textCapSentences" />
 
     <EditText
-        android:id="@+id/edtSuaSoTien"
+        android:id="@+id/editSuaSoTien"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Số tiền"
         android:inputType="numberDecimal|numberSigned" />
 
     <EditText
-        android:id="@+id/edtSuaGhiChu"
+        android:id="@+id/editSuaGhiChu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Ghi chú"
