@@ -46,6 +46,13 @@
             android:text="Trạng thái thanh toán"
             android:layout_marginTop="12dp" />
 
+
+        <Button
+            android:id="@+id/btnDoiTrangThai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đổi trạng thái thanh toán" />
+
         <Button
             android:id="@+id/btnChinhSua"
             android:layout_width="match_parent"

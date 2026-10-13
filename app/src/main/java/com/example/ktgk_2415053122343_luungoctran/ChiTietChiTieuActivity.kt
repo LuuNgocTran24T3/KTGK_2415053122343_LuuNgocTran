@@ -71,6 +71,11 @@ class ChiTietChiTieuActivity : AppCompatActivity() {
             ghiChu = ghiChu_343,
             daThanhToan = false
         )
+
+        findViewById<Button>(R.id.btnDoiTrangThai).setOnClickListener {
+            khoanChi_343.daThanhToan = !khoanChi_343.daThanhToan
+            hienThiKhoanChi_343()
+        }
     }
 
 
